@@ -5,7 +5,7 @@ if not vim.loop.fs_stat(lazypath) then
 		"clone",
 		"--filter=blob:none",
 		"https://github.com/folke/lazy.nvim.git",
-		"--branch=stable", -- latest stable release
+		"--branch=stable",
 		lazypath,
 	})
 end
@@ -14,6 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 vim.o.tabstop = 2 
 vim.o.shiftwidth = 2
 vim.o.number = true
+vim.opt.clipboard = "unnamedplus"
 
 require("lazy").setup({
 	{
@@ -61,10 +62,9 @@ require("lazy").setup({
 	},
 	{
     'nvim-lualine/lualine.nvim',
-    dependencies = { 'nvim-tree/nvim-web-devicons' },
+		dependencies = { 'nvim-tree/nvim-web-devicons' },
 		config = { theme = 'rose-pine' }
 	}
-
 })
 
 vim.g.mapleader = " ";
