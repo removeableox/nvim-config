@@ -61,9 +61,14 @@ require("lazy").setup({
 		"sitiom/nvim-numbertoggle"
 	},
 	{
-    'nvim-lualine/lualine.nvim',
+		'nvim-lualine/lualine.nvim',
 		dependencies = { 'nvim-tree/nvim-web-devicons' },
 		config = { theme = 'rose-pine' }
+	},
+	{ 
+		"windwp/nvim-ts-autotag", config = function ()
+			require'nvim-ts-autotag'.setup()
+		end
 	}
 })
 
