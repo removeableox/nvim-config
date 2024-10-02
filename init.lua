@@ -74,3 +74,4 @@ require("lazy").setup({
 
 vim.g.mapleader = " ";
 vim.keymap.set("n", "<leader>e", ":Dirbuf<CR>");
+vim.keymap.set("n", "y", "\"+y");
